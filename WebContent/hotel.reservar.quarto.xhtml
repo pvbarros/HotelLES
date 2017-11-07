@@ -1,0 +1,62 @@
+<html 	xmlns="http://www.w3.org/1999/xhtml"
+    	xmlns:h="http://java.sun.com/jsf/html"
+    	xmlns:f="http://java.sun.com/jsf/core"
+    	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Hotel Paulista</title>
+</h:head>
+
+<style>
+	body{
+		font-family: "Trebuchet MS", sans-serif;
+		margin: 50px;
+		background:#dcdcdc;
+	}
+</style>
+<h:body>
+
+	<h:form>
+	
+		<p:growl id="panelOne" showDetail="true" />	
+		<p:panel id="sistema_hotel" header="Hotel Paulista - Login" toggleable="true" closable="true" toggleSpeed="500"
+					closeSpeed="500" widgetVar="panelOne" style="margin-bottom:20px; background:#F5F5F5; font-size:16px" >
+ 
+        <p:ajax event="close" listener="#{headerMB.onFechar}" update="panelOne" />
+        <p:ajax event="toggle" listener="#{headerMB.onMinimizar}" update="panelOne" />
+ 
+        <h:panelGrid columns="3" cellpadding="10">
+        	<p:outputLabel value="Bem vindo(a), " /> <p:outputLabel value="#{loginMB.usuario.nome}"  />
+        	<p:commandButton value="Sair"/>
+        </h:panelGrid>
+        </p:panel>
+		
+        <p:growl id="panelTwo" showDetail="true" />	
+			<p:panel id="menu_principal" header="Menu Principal" widgetVar="panelTwo" 
+						style="margin-bottom:5px; font-size:16px; background:#F5F5F5;">
+			<h:panelGrid columns="1" cellpadding="5">    
+			   	
+        	<p:breadCrumb style="margin-bottom:10px; background:#FFE4E1">
+				<p:menuitem value="Categories" url="#" />
+				<p:menuitem value="Cadastrar-se" url="#" />
+    			<p:menuitem value="Reservar Quarto" url="./hotel.reservar.quarto.xhtml" />
+    			<p:menuitem value="Estadia" url="#" />
+    			<p:menuitem value="Solicitar Serviço" url="#" />
+ 			</p:breadCrumb>
+ 			
+			</h:panelGrid>
+        	</p:panel>	
+ 		
+ 		<p:growl id="panelTree" showDetail="true" />
+ 		<p:panel widgetVar="panelTree">
+			<div align="center">
+	    	<p:outputLabel value="Bem vindo ao site do Hotel Paulista." style="font-family: helvetica; font-size:16px;"/>
+	    	
+	    	
+	    	</div>
+	    </p:panel>
+		
+	</h:form>
+
+</h:body>
+</html>
+
