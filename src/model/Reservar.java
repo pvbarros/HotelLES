@@ -11,7 +11,6 @@ public class Reservar {
 	private TipoQuarto tipoQuarto;
 	private int qtdQuarto;
 	private int qtdHospedes;
-	private String destino;
 	
 	public Date getCheckIn() {
 		return checkIn;
@@ -53,13 +52,7 @@ public class Reservar {
 		this.qtdHospedes = qtdHospedes;
 	}
 	
-	public String getDestino() {
-		return destino;
-	}
-	
-	public void setDestino(String destino) {
-		this.destino = destino;
-	}
+
 
 	
 	

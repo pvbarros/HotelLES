@@ -2,18 +2,18 @@ package model;
 
 public class Hospede {
 	
-	private long id;
+	private String cpf;
 	private String nome;
 	private String estado;
 	private String userID;
 	private String password;
 	
-	public long getId() {
-		return id;
+	public String getCpf() {
+		return cpf;
 	}
 	
-	public void setId(long id) {
-		this.id = id;
+	public void setId(String cpf) {
+		this.cpf = cpf;
 	}
 	
 	public String getNome() {

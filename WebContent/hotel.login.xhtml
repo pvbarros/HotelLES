@@ -3,7 +3,7 @@
     	xmlns:f="http://java.sun.com/jsf/core"
     	xmlns:p="http://primefaces.org/ui">
 <h:head>
-	<title>Hotel Paulista</title>
+	<title>Hotel Paulista Conforto</title>
 </h:head>
 
 <style>
@@ -13,12 +13,17 @@
 		background:#dcdcdc;
 	}
 </style>
+
 <h:body>
+
+<div align="center">
+<h1 style="margim-bottom:10px">Hotel Paulista Conforto</h1>
+</div>
 
 	<h:form>
 	
 		<p:growl id="panelOne" showDetail="true" />	
-		<p:panel id="sistema_hotel" header="Hotel Paulista - Login" toggleable="true" closable="true" toggleSpeed="500"
+		<p:panel id="sistema_hotel" header="Login" toggleable="true" closable="true" toggleSpeed="500"
 					closeSpeed="500" widgetVar="panelOne" style="margin-bottom:20px; background:#F5F5F5; font-size:16px" >
  
         <p:ajax event="close" listener="#{headerMB.onFechar}" update="panelOne" />
@@ -31,7 +36,7 @@
         	<p:outputLabel value="Senha:" />
         	<p:password id="txtSenha" value="#{loginMB.usuario.password}"/>
         	
-        	<p:commandButton value="Login" action="#{loginMB.login}"/>
+        	<p:commandButton responsive="true" value="Login" action="#{loginMB.login}"/>
         	<!-- <p:commandButton value="Registrar" action="#{loginMB.registrar}"/> -->
         </h:panelGrid>
         </p:panel>
@@ -44,7 +49,7 @@
         	<p:breadCrumb style="margin-bottom:10px; background:#FFE4E1">
 				<p:menuitem value="Categories" url="#" />
 				<p:menuitem value="Cadastrar-se" url="#" />
-    			<p:menuitem value="Reservar Quarto" url="./hotel.reservar.quarto.xhtml" />
+    			<p:menuitem value="Reservar Quarto" url="#" />
     			<p:menuitem value="Estadia" url="#" />
     			<p:menuitem value="Solicitar Serviço" url="#" />
  			</p:breadCrumb>
