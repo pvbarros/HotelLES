@@ -1,25 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
 <html 	xmlns="http://www.w3.org/1999/xhtml"
     	xmlns:h="http://java.sun.com/jsf/html"
     	xmlns:f="http://java.sun.com/jsf/core"
     	xmlns:p="http://primefaces.org/ui">
 <h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
 	<title>Hotel Paulista Conforto</title>
 </h:head>
 
-<style>
-	body{
-		font-family: "Trebuchet MS", sans-serif;
-		margin: 50px;
-		background:#dcdcdc;
-	}
-</style>
 <h:body>
 
 <div align="center">
 <h1>Hotel Paulista Conforto</h1>
 </div>
+
 	<h:form>
-	
+
 		<p:growl id="panelOne" showDetail="true" />	
 		<p:panel id="sistema_hotel" header="Hotel Paulista - Login" toggleable="true" closable="true" toggleSpeed="500"
 					closeSpeed="500" widgetVar="panelOne" style="margin-bottom:20px; background:#F5F5F5; font-size:16px" >
@@ -29,10 +26,10 @@
  
         <h:panelGrid columns="3" cellpadding="10">
         	<p:outputLabel value="Bem vindo(a), " /> <p:outputLabel value="#{loginMB.usuario.nome}"  />
-        	<p:commandButton value="Sair"/>
+        	<p:commandButton style="font-size:15px" value="Sair"/>
         </h:panelGrid>
         </p:panel>
-		
+
         <p:growl id="panelTwo" showDetail="true" />	
 			<p:panel id="menu_principal" header="Menu Principal" widgetVar="panelTwo" 
 						style="margin-bottom:5px; font-size:16px; background:#F5F5F5;">
@@ -43,7 +40,7 @@
 				<p:menuitem value="Cadastrar-se" url="#" />
     			<p:menuitem value="Reservar Quarto" url="./hotel.reservar.quarto.xhtml" />
     			<p:menuitem value="Estadia" url="#" />
-    			<p:menuitem value="Solicitar ServiÃ§o" url="#" />
+    			<p:menuitem value="Solicitar Serviço" url="#" />
  			</p:breadCrumb>
  			
 			</h:panelGrid>
@@ -54,18 +51,18 @@
 	    	<p:growl id="msgs" showDetail="true" />
  
   				<p:panel id="basic" header="Reservar Quarto" footer="Hotel Paulista Conforto - Reserva de Quarto" 
-  							style="margin-bottom:20px">
+  							style="margin-bottom:20px; font-size:16px">
         			<h:panelGrid columns="2" cellpadding="10">
         				<p:outputLabel value="Check-in:" />
         				<p:calendar id="calCheckIn" pattern="dd/MM/yyyy" navigator="true" mask="true" 
-        							value="#{valor.dois}" required="true" />
+        							value="#{valor.dois}" required="true" tabindex="1" />
         					
         				<p:outputLabel value="Check-out:"/>				
         				<p:calendar id="calCheckOut" pattern="dd/MM/yyyy" navigator="true" mask="true" 
-        							value="#{valor.tres}" required="true" />
+        							value="#{valor.tres}" required="true" tabindex="2"/>
 
         				<p:outputLabel value="Tipo de Quarto:"/>
-							<p:selectOneMenu id="console" value="#{selectOneMenuView.console}" style="width:125px">
+							<p:selectOneMenu id="console" value="#{selectOneMenuView.console}" style="width:125px" tabindex="3">
             					<f:selectItem itemLabel="Selecione quarto" itemValue="" />
             					<f:selectItem itemLabel="Solteiro" itemValue="Solteiro" />
             					<f:selectItem itemLabel="Casal" itemValue="Casal" />
@@ -73,15 +70,15 @@
        						 </p:selectOneMenu> 
        						 
        					<p:outputLabel value="Quantidade de quartos:"/>
-       					<p:spinner id="spnQuartos" value="#{spinnerView.number3}" min="0" max="20" />
-       					<p:outputLabel value="Quantidade de hÃ³spedes:"/>
-       					<p:spinner id="spnHospedes" value="#{spinnerView.number3}" min="0" max="20" />
+       					<p:spinner id="spnQuartos" value="#{spinnerView.number3}" min="0" max="20" tabindex="4" />
+       					<p:outputLabel value="Quantidade de hóspedes:"/>
+       					<p:spinner id="spnHospedes" value="#{spinnerView.number3}" min="0" max="20" tabindex="5"/>
        					
        				</h:panelGrid>
-       				    <p:commandButton value="Salvar" action="#{produtoMB.inserir}"/>
-						<p:commandButton value="Editar" action="#{produtoMB.atualizar}"/>
-						<p:commandButton value="Pesquisar" action="#{produtoMB.pesquisar}"/>
-        				<p:commandButton value="Excluir" action="#{produtoMB.excluir}"/>
+       				    <p:commandButton style="font-size:15px" value="Salvar" action="#{produtoMB.inserir}" tabindex="6" />
+						<p:commandButton style="font-size:15px" value="Editar" action="#{produtoMB.atualizar}" tabindex="7" />
+						<p:commandButton style="font-size:15px" value="Pesquisar" action="#{produtoMB.pesquisar}" tabindex="8" />
+        				<p:commandButton style="font-size:15px" value="Excluir" action="#{produtoMB.excluir}" tabindex="9" />
    				 </p:panel>
 
 	    </p:panel>
