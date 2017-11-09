@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+body{
+	font-family: "Trebuchet MS", sans-serif;
+	margin: 10px;
+	background-image: url("./../img/cutegrey.jpg");
+	background-repeat: repeat;
+	background-size: cover;
+	background-size:10%;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    position: absolute;
+    right: 0;
+    top: 0;	
+}
