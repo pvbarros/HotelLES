@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<html 	xmlns="http://www.w3.org/1999/xhtml"
+    	xmlns:h="http://java.sun.com/jsf/html"
+    	xmlns:f="http://java.sun.com/jsf/core"
+    	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+	<title>Hotel Paulista Conforto</title>
+</h:head>
+
+<h:body>
+
+<div align="center">
+<h1 style="color:#8B814C">Hotel Paulista Conforto</h1>
+<h4 style="color: #696969">Bem vindo ao site do Hotel Paulista.</h4>
+<!-- border: 5px solid #CFCFCF; -->
+</div>
+
+	<h:form>
+        <p:growl id="panelOne" showDetail="true" />	
+			<p:panel id="menu_principal" header="Menu Principal" widgetVar="panelOne" 
+						style="margin-bottom:5px; font-size:16px; background:#F5F5F5;">
+			<h:panelGrid columns="1" cellpadding="5">    
+			   	
+        	<p:breadCrumb style="margin-bottom:10px; background:#FFE4E1">
+				<p:menuitem value="Categories" url="#" />
+				<p:menuitem value="Cadastrar-se" url="#" />
+				<p:menuitem value="Login" url="#" />
+    			<p:menuitem value="Reservar Quarto" url="#" />
+    			<p:menuitem value="Estadia" url="#" />
+    			<p:menuitem value="Solicitar Serviço" url="#" />
+ 			</p:breadCrumb>
+ 			
+			</h:panelGrid>
+        	</p:panel>	
+ 		
+ 		<p:growl id="panelTwo" showDetail="true" />
+ 		<p:panel widgetVar="panelTwo">
+			<div align="center">
+	    	<p><h:outputText style="text-align:center; margin-bottom:10px; helvetica; font-size:18px;" value="O Hotel Paulista Conforto tem uma área dedicada ao 
+	    			relaxamento e interatividade dos hóspedes que procuram na atividade esportiva manter a saúde e bem-estar. Confira: "/></p>
+	    	</div>
+		
+    <p:carousel numVisible="1" effect="easeInStrong" headerText="Serviços" style="margin-bottom:px; helvetica; font-size:16px; background:" 
+    			circular="true" autoPlayInterval="3100" responsive="true" pageLinks="4">
+        <p:tab title="Academia">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage value="/img/academia.jpeg" width="400px" height="300px" />
+                <h:outputText value="Academia com espaço amplo, organizado e equipamentos modernos." />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Quadra">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage value="/img/esportetenis.jpg" width="400px" height="300px"/>
+                <h:outputText value="Quadra de Squash com piso de madeira (verificar horário disponível)." />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Wifi">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage value="/img/wifi.jpg" width="400px" height="300px" />
+                <h:outputText value="Wi-Fi livre em todas as comodidades do hotel, a partir do hall de entrada e nos quartos reservados pelos hóspedes." />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Restaurante">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage value="/img/restaurante.jpg" width="400px" height="300px" />
+                 <h:panelGrid columns="1" cellpadding="10">
+                <h:outputText value="Na cidade da gastronomia nosso restaurante tem um delicioso e variado cardápio de comida internacional. Nosso restaurante sempre 
+                					agrada aos paladares de seus clientes." />
+				<h:outputText style="font-size:12px;" value="*O serviço de quarto funciona das 6:30 a 23:50" />
+				<h:outputText style="font-size:12px;" value="**Consulte-nos sobre horários difereciados no final de ano" />
+			</h:panelGrid>
+			
+            </h:panelGrid>
+        </p:tab>
+    </p:carousel>
+	   </p:panel>
+	   
+		
+	</h:form>
+
+</h:body>
+</html>
