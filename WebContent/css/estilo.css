@@ -2,10 +2,10 @@
 body{
 	font-family: "Trebuchet MS", sans-serif;
 	margin: 10px;
-	background-image: url("./../img/cutegrey.jpg");
+	background-image: url("./../img/bg1.png");
 	background-repeat: repeat;
 	background-size: cover;
-	background-size:10%;
+	background-size: 70%;
     bottom: 0;
     color: black;
     left: 0;
@@ -15,3 +15,11 @@ body{
     right: 0;
     top: 0;	
 }
+.footer{
+	font-family: "Trebuchet MS", sans-serif;
+	color:#FFFFF0;
+	margin-bottom:10px;
+	padding: 2em;
+	font-weight:bold;
+}
+
