@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<html 	xmlns="http://www.w3.org/1999/xhtml"
+    	xmlns:h="http://java.sun.com/jsf/html"
+    	xmlns:f="http://java.sun.com/jsf/core"
+    	xmlns:p="http://primefaces.org/ui"
+    	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+	<title>Entre em contato conosco | Hotel Paulista Conforto</title>
+</h:head>
+<h:body>
+	
+	<h:form>
+	
+	<!-- CABECALHO DO SITE (titulo com o nome do hotel) -->	
+		<div>
+			<ui:insert name="title">
+				<ui:include src="/pattern/title.xhtml" />
+			</ui:insert>
+		</div>
+		
+	<!-- PAINEL DO MENU PRINCIPAL -->
+		<div>
+			<ui:insert name="menuPrincipal">
+				<ui:include src="/pattern/menuPrincipal.xhtml" />
+			</ui:insert>
+		</div>
+	
+	<!-- PAINEL DE CONTATO COM O HOTEL -->
+	<p:growl id="painelContatoHotel" showDetail="true" />
+ 		<p:panel widgetVar="painelContatoHotel" style="background:#CDC0B0" >
+ 		
+		 	<div class="ui-g">
+		   		<div class="ui-g-12 ui-md-6 ui-lg-3">
+		   			<p:graphicImage value="/img/brand.jpg" style="width:100%; height:100%;"/>
+		   		</div>
+		   		<div class="ui-g-12 ui-md-6 ui-lg-3">
+					<p:outputLabel value="Hotel Paulista Conforto" style="font-variant: small-caps; font-weight:bold; font-size: 30px"/>
+					<div align="center">
+					<p><p:outputLabel style="font-size:17px" value="Avenida Paulista, 3000, Jardins - São Paulo, SP, Brasil, CEP: 01420-002"/></p></div>
+					<h:panelGrid columns="1" cellpadding="10">
+						<p:outputLabel value="Formulário de Contato" style="font-weight: bold; font-family:Trebuchet MS; font-size:20px"/>
+					</h:panelGrid>
+					<h:panelGrid columns="2" cellpadding="10">
+						<h:outputText value="*Seu nome:" />
+						<p:inputText required="true"/>
+						<h:outputText value="*Seu e-mail:" />
+						<p:inputText required="true"/>
+						<h:outputText value="Telefone:" />
+						<p:inputMask id="inputTelefone" mask="(99)99999-9999" required="false" />
+						<h:outputText value="*Assunto:" />
+						<p:inputText required="true" maxlength="50"/>
+						<h:outputText value="Mensagem:" />
+						<p:inputTextarea rows="6" cols="33" />
+					</h:panelGrid>
+				</div>
+		    	<div class="ui-g-12 ui-md-6 ui-lg-3">ui-g-12 ui-md-6 ui-lg-3</div>
+			</div>
+		 
+			<div class="ui-g">
+		    	<div class="ui-g-12 ui-md-6 ui-lg-4">lalalalal</div>
+		    	<div class="ui-g-12 ui-md-6 ui-lg-4">ui-g-12 ui-md-6 ui-lg-4</div>
+		    	<div class="ui-g-12 ui-lg-4">ui-g-12 ui-lg-4</div>
+			</div>	
+ 		
+ 		</p:panel>
+	
+	<!-- RODAPE -->
+		<div>
+			<ui:insert name="footer">
+				<ui:include src="/pattern/footer.xhtml" />
+			</ui:insert>
+		</div>	
+	
+	
+	</h:form>
+	
+</h:body>
+</html>

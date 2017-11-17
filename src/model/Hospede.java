@@ -5,6 +5,7 @@ public class Hospede {
 	private String cpf;
 	private String nome;
 	private String estado;
+	private String pais;
 	private String userID;
 	private String password;
 	
@@ -46,6 +47,14 @@ public class Hospede {
 	
 	public void setEstado(String estado) {
 		this.estado = estado;
+	}
+
+	public String getPais() {
+		return pais;
+	}
+
+	public void setPais(String pais) {
+		this.pais = pais;
 	}
 	
 }
