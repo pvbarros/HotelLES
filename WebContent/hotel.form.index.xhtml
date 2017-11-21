@@ -20,20 +20,13 @@
 			</ui:insert>
 		</div>
 		
-        <p:growl id="painelMenuPrincipal" showDetail="true" />	
-			<p:panel id="menu_principal" header="Menu Principal" widgetVar="panelOne" style="margin-bottom:5px; font-size:16px; background:#CDC0B0">
-			<h:panelGrid columns="1" cellpadding="5" >    
+	<!-- PAINEL DO MENU PRINCIPAL -->
+		<div>
+			<ui:insert name="menuPrincipal">
+				<ui:include src="/pattern/menuPrincipal.xhtml" />
+			</ui:insert>
+		</div>	
 			
-        	<p:breadCrumb style="margin-bottom:10px; background:#FFFFF0">
-				<p:menuitem value="Categories" url="#" />
-				<p:menuitem value="Cadastrar-se" url="/hotel.form.cadastro.xhtml" />
-				<p:menuitem value="Login" url="#" />
-    			<p:menuitem value="Sobre o hotel" url="" />
-    			<p:menuitem value="Reservar Quarto" url="#" />
- 			</p:breadCrumb>
-			</h:panelGrid>
-        	</p:panel>	
- 		
  	<!-- AREA DE DESTAQUES DO HOTEL -->
  		<p:growl id="painelDestaques" showDetail="true" />
  		<p:panel widgetVar="painelDestaques" style="background:#CDC0B0">

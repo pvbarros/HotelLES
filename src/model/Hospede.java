@@ -6,7 +6,7 @@ public class Hospede {
 	private String nome;
 	private String estado;
 	private String pais;
-	private String userID;
+	private String email;
 	private String password;
 	
 	public String getCpf() {
@@ -25,12 +25,12 @@ public class Hospede {
 		this.nome = nome;
 	}
 	
-	public String getUserID() {
-		return userID;
+	public String getEmail() {
+		return email;
 	}
 	
-	public void setUserID(String userID) {
-		this.userID = userID;
+	public void setUserID(String email) {
+		this.email = email;
 	}
 	
 	public String getPassword() {
