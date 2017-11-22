@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.Date;
+import java.util.List;
 
 import enumerator.TipoQuarto;
 
@@ -9,8 +10,8 @@ public class Reservar {
 	private Date checkIn;
 	private Date checkOut;
 	private TipoQuarto tipoQuarto;
-	private int qtdQuarto;
-	private int qtdHospedes;
+	private List<Quarto> qtdQuarto;
+	private List<Hospede> qtdHospedes;
 	
 	public Date getCheckIn() {
 		return checkIn;
@@ -36,21 +37,24 @@ public class Reservar {
 		this.tipoQuarto = tipoQuarto;
 	}
 	
-	public int getQtdQuarto() {
+	public List<Quarto> getQtdQuarto() {
 		return qtdQuarto;
 	}
-	
-	public void setQtdQuarto(int qtdQuarto) {
+
+	public void setQtdQuarto(List<Quarto> qtdQuarto) {
 		this.qtdQuarto = qtdQuarto;
 	}
-	
-	public int getQtdHospedes() {
+
+	public List<Hospede> getQtdHospedes() {
 		return qtdHospedes;
 	}
-	
-	public void setQtdHospedes(int qtdHospedes) {
+
+	public void setQtdHospedes(List<Hospede> qtdHospedes) {
 		this.qtdHospedes = qtdHospedes;
 	}
+	
+
+
 	
 
 

@@ -1,6 +1,7 @@
 package model;
 
 public class Quarto {
+	
 	private float valor;
 	private int numeroQuarto;
 	private boolean disponibilidade;

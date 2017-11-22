@@ -1,12 +1,30 @@
 package model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Hospede {
 	
+	@Id
+	@Column
 	private String cpf;
+	
+	@Column(name = "nomeHospede", nullable = false, length = 100)
 	private String nome;
+	
+	@Column
 	private String estado;
+	
+	@Column(nullable = false)
 	private String pais;
+	
+	
+	@Column(nullable = false)
 	private String email;
+	
+	@Column(nullable = false, length = 16)
 	private String password;
 	
 	public String getCpf() {
